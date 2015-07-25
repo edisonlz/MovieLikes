@@ -85,6 +85,14 @@
     // 3. add a new navigation item w/title to the new nav bar
     UINavigationItem *newItem = [[UINavigationItem alloc] init];
     newItem.title = self.movieDetails.movieTitle;
+    
+    NSDictionary * fontDict =   [NSDictionary dictionaryWithObjectsAndKeys:
+                                 [UIColor whiteColor], NSForegroundColorAttributeName,
+                                 [UIFont fontWithName:@"ArialMT" size:20.0],
+                                 NSFontAttributeName,nil];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:fontDict];
+    
     [newNavBar setItems:@[newItem]];
     
     newNavBar.hidden = YES;
